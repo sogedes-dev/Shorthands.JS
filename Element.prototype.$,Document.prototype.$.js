@@ -3,7 +3,7 @@
 * Otherwise returns all elements matching the selector in the subtree as array.
 */
 Element.prototype.$=Document.prototype.$=function(sel){
-  return /#[^\s\>~|]+$/.exec(sel)?
+  return /#[^\s>~|]+$/.exec(sel)?
     this.querySelector(sel):
     [...this.querySelectorAll(sel)]
 };
