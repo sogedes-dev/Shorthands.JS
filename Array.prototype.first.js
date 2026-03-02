@@ -1,7 +1,7 @@
 /*
     Returns the first element of an array with optional filtering and default value
  */
-Object.defineProperty(Array.prototype,"first",{value:function first(b) {
+Object.defineProperty(Array.prototype,"first",{value:function first(filter,def) {
     if(filter)
         var r=this.filter(filter);
     else
