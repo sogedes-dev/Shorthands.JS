@@ -1,4 +1,4 @@
-Array.prototype.toXlsx=function(name){
+Object.defineProperty(Array.prototype,"toXlsx",{value:function toXlsx(name) {
     var doc = new DOMParser().parseFromString("<root />", "application/xml");
     var root=doc.documentElement;
     for(var i=0;i<this.length;i++){
@@ -20,4 +20,4 @@ Array.prototype.toXlsx=function(name){
     });
     zip.mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
     return zip;
-}
+}});
