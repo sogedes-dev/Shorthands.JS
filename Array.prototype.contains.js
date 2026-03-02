@@ -3,6 +3,6 @@
  * @returns {boolean}
  * @param b Value to search for
  */
-Object.defineProperty(Array.property,"contains",{value:function contains(b) {
+Object.defineProperty(Array.prototype,"contains",{value:function contains(b) {
     return this.indexOf(b)>=0;
 }});
