@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@master
 
       - name: Merge JS Files
         run: |
@@ -22,8 +22,29 @@ jobs:
           name: js-artifact
           path: Shorthand.js
           retention-days: 90
-          
-#      - name: 'Create Release'
-#        run: hub release create release_name -m SingleFile -a Shorthand.js
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}*/
+     
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        with:
+          tag_name: ${{ github.event.repository.updated_at}}
+          release_name: Release ${{ github.event.repository.updated_at}}
+          body: |
+            Changes in this Release
+            - First Change
+            - Second Change
+          draft: false
+          prerelease: false
+
+      - name: Upload Release Asset
+        id: upload-release-asset 
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+          asset_path: ./Shorthand.js
+          asset_name: Shorthand.js
+          asset_content_type: text/javascript
