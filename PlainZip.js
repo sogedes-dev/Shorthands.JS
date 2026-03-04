@@ -47,7 +47,7 @@ PlainZip.prototype._crc32=function(r){
 /**
  * Adds data to the zip file
  *
- * @param arrayOfData Data must be [{name:string,data:Uint8Array/string,modified:unixTimestamp?}] or a dictionary {name:data}
+ * @param arrayOfData Data must be an array of objects with each object having string:name, string:data or Uint8Array data and unixTimestamp:modified. Alternatively a name/value dictionary may be given.
  */
 PlainZip.prototype.addData=function(arrayOfData){
     if(this.finalized)
