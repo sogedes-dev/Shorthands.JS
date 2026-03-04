@@ -3,6 +3,8 @@
  * @alias Array.prototype.asEntries
  * @returns [{string} name,{object} value][]
  */
-Object.defineProperty(Array.prototype,"asEntries",{value:function asEntries() {
+Array.prototype.asEntries = function asEntries() {
     return Object.fromEntries(this);
-}});
+};
+
+Object.defineProperty(Array.prototype,"asEntries",{enumerable:false}) 
