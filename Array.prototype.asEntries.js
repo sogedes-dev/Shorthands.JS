@@ -1,13 +1,16 @@
+/** @class Array */
+
 /**
  * Returns all own properties of an object as an Array of name<->value pairs
- * @alias Array.prototype.asEntries
  * @method
+ * @instance
  * @memberOf Array
- * @name Array#asEntries
- * @returns {Array}
+ * @name asEntries
  */
+
 Array.prototype.asEntries = function asEntries() {
     return Object.fromEntries(this);
 };
 
-Object.defineProperty(Array.prototype,"asEntries",{enumerable:false}) 
+Object.defineProperty(Array.prototype,"asEntries",{enumerable:false})
+
