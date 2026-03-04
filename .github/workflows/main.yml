@@ -27,6 +27,7 @@ jobs:
       - name: Merge JS Files
         run: |
           mkdir out
+          mkdir docs
           find . -type f -name '*.js' ! -name 'Shorthand.js' -exec cat {} + > out/Shorthand.js
 
       - name: Get current date
@@ -45,7 +46,7 @@ jobs:
         with:
           source_dir: ./out
           recurse: false
-          output_dir: ./out
+          output_dir: ./docs
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -54,6 +55,11 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: './out/'
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './docs/'
           
       - name: Deploy to GitHub Pages
         id: deployment
