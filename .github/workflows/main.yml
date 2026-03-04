@@ -40,6 +40,13 @@ jobs:
           path: out/Shorthand.js
           retention-days: 90
 
+      - name: Build
+        uses: andstor/jsdoc-action@v1
+        with:
+          source_dir: ./out
+          recurse: false
+          output_dir: ./out
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
         
