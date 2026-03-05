@@ -1,5 +1,13 @@
-/*
-    Returns the last element of an array with optional filtering and default value
+/** @class Array */
+/**
+ * Returns the last element of an array with optional filtering and default value
+ * @method
+ * @instance
+ * @memberOf Array
+ * @name last
+ * @returns {Object|undefined}
+ * @param filter {function} Optional callback to filter the array with before returning the last entry
+ * @param default {Object} Optional return value if no entry in result.
  */
 Object.defineProperty(Array.prototype,"last",{value:function last(filter,def) {
     if(filter)
