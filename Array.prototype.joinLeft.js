@@ -4,7 +4,7 @@
  * @instance
  * @memberOf Array
  * @name joinLeft
- * @returns {[string,Array]}
+ * @returns {Array}
  * @param secondArray {Array} Array to be joined
  * @param matcher {function} A callback to be called with each line of self (with params(selfLine,secondArrayLine)) to determine a match
  */
