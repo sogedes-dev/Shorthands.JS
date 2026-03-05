@@ -1,5 +1,13 @@
-/*
-    Returns the first element of an array with optional filtering and default value
+/** @class Array */
+/**
+ * Returns the first element of an array with optional filtering and default value
+ * @method
+ * @instance
+ * @memberOf Array
+ * @name first
+ * @returns {Object|undefined}
+ * @param filter {function} Optional callback to filter the array with before returning the first entry
+ * @param default {Object} Optional return value if no entry in result.
  */
 Object.defineProperty(Array.prototype,"first",{value:function first(filter,def) {
     if(filter)
