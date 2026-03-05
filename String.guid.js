@@ -1,3 +1,10 @@
+/**
+ * Creates a crypto-secure guid
+ * @memberOf String
+ * @name guid
+ * @returns {string}
+ */
+
 String.guid = function(){
   return Array.prototype.slice.call(crypto.getRandomValues(new Uint8Array(16))).map(a=>("0"+a.toString(16)).slice(-2)).join("");
 };
