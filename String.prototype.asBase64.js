@@ -3,7 +3,7 @@
  * @method
  * @instance
  * @memberOf String
- * @name keys
+ * @name asBase64
  * @returns {string}
  */
 
