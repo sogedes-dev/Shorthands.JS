@@ -1,3 +1,15 @@
+/** @class Array */
+/**
+ * Groups an array into a nested tree meaning for each param the array that would be an array turns itself into a value:results dictionary
+ * @method
+ * @instance
+ * @memberOf Array
+ * @name groupBy
+ * @returns {Object}
+ * @param grouper1 {function|string} Either a callback to be used for grouping or the name of a field
+ * @param grouper2 {function|string} Either a callback to be used for grouping or the name of a field to be performed on each result of grouper1
+ * @param grouperN {function|string} Either a callback to be used for grouping or the name of a field to be performed on each result of previous grouper
+ */
 Object.defineProperty(Array.prototype,"groupBy",{value:function groupBy(args) {
   args=[...arguments];
   
