@@ -1,4 +1,3 @@
-/** @class Array */
 /**
  * Checks if an array contains the given parameter
  * @method
