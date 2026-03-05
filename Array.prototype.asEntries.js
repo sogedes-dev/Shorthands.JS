@@ -1,5 +1,3 @@
-/** @class Array */
-
 /**
  * Returns all own properties of an object as an Array of name<->value pairs
  * @method
