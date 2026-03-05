@@ -1,7 +1,13 @@
+/** @class Array */
 /**
  * Returns all distinct values of an array
+ * @method
+ * @instance
+ * @memberOf Array
+ * @name distinct
+ * @returns {Array}
+ * @param serialize {boolean} If set will return distinct JSON-serialized (deserialized again after distinct)
  */
-
 Object.defineProperty(Array.prototype,"distinct",{value:function distinct(serialize) {
     if(serialize){
         return this.map(a=>a.toJson()).distinct().map(a=>a.asJson());
