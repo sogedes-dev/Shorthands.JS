@@ -4,6 +4,7 @@
  * @instance
  * @memberOf Object
  * @name clone
+ * @returns {Object}
  */
 
 Object.defineProperty(Object.prototype,"clone",{value:function clone(name,property){
