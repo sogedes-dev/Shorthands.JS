@@ -1,4 +1,3 @@
-/** @class Array */
 /**
  * Returns the first element of an array with optional filtering and default value
  * @method
