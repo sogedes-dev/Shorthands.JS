@@ -28,7 +28,8 @@ jobs:
         run: |
           mkdir out
           mkdir docs
-          find . -type f -name '*.js' ! -name 'Shorthand.js' -exec cat {} + > out/Shorthand.js
+          find . -type f -name '*.js' ! -name 'Shorthand.js' -print0 | sort -z | xargs -r0 cat > out/Shorthand.js
+#          find . -type f -name '*.js' ! -name 'Shorthand.js' -exec cat {} + > out/Shorthand.js
 
       - name: Get current date
         id: date
