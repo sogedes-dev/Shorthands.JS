@@ -1,3 +1,12 @@
+/**
+ * Encodes the current String as UTF-16 bytes
+ * @method
+ * @instance
+ * @memberOf String
+ * @name toUTF16
+ * @returns {Uint8Array}
+ */
+
 String.prototype.toUTF16=function(){
     var out=new Uint8Array(2+this.length*2);
     out[0]=0xFF;
@@ -8,4 +17,4 @@ String.prototype.toUTF16=function(){
         out[2+i*2+1]=(c&0xff00)>>>8;
     }
     return out;
-}
+};
