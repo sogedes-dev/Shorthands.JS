@@ -3,7 +3,7 @@
  * @method
  * @instance
  * @memberOf Object
- * @name clone
+ * @name defineProperty
  * @param name {string} Name of the property
  * @param propertyDescriptor {Object} Configuration for the property
  * @returns {Object}
