@@ -1,4 +1,3 @@
-/** @class Array */
 /**
  * Returns all distinct values of an array
  * @method
