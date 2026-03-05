@@ -1,3 +1,13 @@
+/**
+ * Returns an XLSX PlainZip with the given name containing a single sheet with the current Array interpreted as 2D string array as content
+ * @method
+ * @instance
+ * @memberOf Array
+ * @name toXlsx
+ * @param name {string} Name of the file to be offered for download
+ * @returns {PlainZip}
+ */
+
 Object.defineProperty(Array.prototype,"toXlsx",{value:function toXlsx(name) {
     var doc = new DOMParser().parseFromString("<root />", "application/xml");
     var root=doc.documentElement;
