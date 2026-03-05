@@ -1,5 +1,3 @@
-/** @class Object */
-
 /**
  * Returns a structured clone of the current object
  * @method
