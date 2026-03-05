@@ -1,3 +1,13 @@
+/**
+ * Returns either the element matching the selector or if it doesn't a promise to be fullfiled when an element matching the selector appears
+ * @method
+ * @instance
+ * @memberOf HTMLElement
+ * @memberOf Document
+ * @name querySelectorAsync
+ * @param selector {string} Selector to search for
+ * @returns {Element|Promise<Element>}
+*/
 HTMLElement.prototype.querySelectorAsync=async function(selector){
 	var initial=this.querySelector(selector);
 	if(initial)
