@@ -1,4 +1,3 @@
-/** @class Array */
 /**
  * Returns the last element of an array with optional filtering and default value
  * @method
