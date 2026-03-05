@@ -3,7 +3,6 @@
  * @method
  * @instance
  * @memberOf Element
- * @memberOf Document
  * @name querySelectorAsync
  * @param selector {string} Selector to search for
  * @returns {Element|Promise<Element>}
@@ -24,6 +23,15 @@ Element.prototype.querySelectorAsync=async function(selector){
 	}.bind(this));
 };
 
+/**
+ * Returns either the element matching the selector or if it doesn't a promise to be fullfiled when an element matching the selector appears
+ * @method
+ * @instance
+ * @memberOf Document
+ * @name querySelectorAsync
+ * @param selector {string} Selector to search for
+ * @returns {Element|Promise<Element>}
+*/
 Document.prototype.querySelectorAsync=async function(selector){
 	return this.documentElement.querySelectorAsync(selector);
 };
