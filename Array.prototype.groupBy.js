@@ -1,4 +1,3 @@
-/** @class Array */
 /**
  * Groups an array into a nested tree meaning for each param the array that would be an array turns itself into a value:results dictionary
  * @method
