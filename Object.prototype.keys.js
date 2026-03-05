@@ -4,7 +4,7 @@
  * @instance
  * @memberOf Object
  * @name keys
- * @returns {Object}
+ * @returns {Array}
  */
 
 Object.defineProperty(Object.prototype,"keys",{value:function keys(){
