@@ -51,7 +51,7 @@ PlainZip.prototype._crc32=function(r){
  * @memberOf PlainZip
  * @name addData
  * @param arrayOfData {Array|Object} Data must be an array of objects with each object having string:name, string:data or Uint8Array data and unixTimestamp:modified. Alternatively a name/value dictionary may be given.
- * @returns {string}
+ * @returns {undefined}
  */
 PlainZip.prototype.addData=function(arrayOfData){
     if(this.finalized)
@@ -80,7 +80,11 @@ PlainZip.prototype.addData=function(arrayOfData){
 
 /**
  * Locks the Zip file and returns the byte stream
- * @returns Uint8Array
+ * @method
+ * @instance
+ * @memberOf PlainZip
+ * @name finalize
+ * @returns {Uint8Array}
  */
 PlainZip.prototype.finalize=function(){
     if(this.finalized)
@@ -127,9 +131,14 @@ PlainZip.prototype.finalize=function(){
 
 
 PlainZip.prototype.mime='application/octet-stream';
+
 /**
  * Locks the Zip file and returns an object url
- * @returns string
+ * @method
+ * @instance
+ * @memberOf PlainZip
+ * @name getObjectURL
+ * @returns {string}
  */
 PlainZip.prototype.getObjectURL=function(){
     this.finalize();
@@ -138,6 +147,12 @@ PlainZip.prototype.getObjectURL=function(){
 
 /**
  * Locks the Zip file and initiates a download
+ * @method
+ * @instance
+ * @memberOf PlainZip
+ * @name download
+ * @param filename {string} Filename to be offered for download
+ * @returns {undefined}
  */
 PlainZip.prototype.download=function(filename){
     let a = document.createElement('a');
